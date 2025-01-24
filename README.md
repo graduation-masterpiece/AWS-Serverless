@@ -1,4 +1,9 @@
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+## 12.8 
+1. DB에 저장된 책 정보를 불러와 이미지 생성, 요약문(소개글) 작성. 다시 DB 에 저장
+2. 프론트엔드 수정사항 적용
+   - DB 에 저장된 이미지와 글 띄우는 부분은 아직 구현이 안됨 -> SearchBar.js 는 기존 코드 유지 (summarypage 창 띄우기 X)
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+## 12.11
+1. DB 에 저장된 이미지, 요약문 불러와서 프론트에 카드뉴스 띄우기
+2. My Library 창에 카드뉴스 목록 띄우기
+   - 목록 클릭시 카드뉴스 페이지로 이동 
