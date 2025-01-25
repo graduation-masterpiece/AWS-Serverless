@@ -26,12 +26,7 @@ jobs:
         npm install -g serverless
         npm ci
 
-    # 4. Serverless 로그인
-    - name: Serverless Login
-      run: |
-        echo ${{ secrets.SERVERLESS_ACCESS_KEY }} | sls login --token
-
-    # 5. Serverless Framework으로 배포
+    # 4. Serverless Framework 배포
     - name: Deploy Serverless app
       run: |
         sls deploy
@@ -39,3 +34,4 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
+        SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}  # 추가된 부분
