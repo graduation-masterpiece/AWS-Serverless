@@ -1,0 +1,14 @@
+service: test-service  # 서비스 이름
+
+provider:
+  name: aws  # AWS 사용
+  runtime: nodejs20.x  # 사용할 Node.js 버전
+  region: ap-northeast-2  # 서울 리전
+
+functions:
+  hello:
+    handler: handler.hello  # handler.js 파일의 hello 함수
+    events:
+      - http:
+          path: hello  # HTTP GET 요청으로 실행
+          method: get
